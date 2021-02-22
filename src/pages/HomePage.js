@@ -1,27 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { Redirect, useHistory } from "react-router-dom";
+import PublicNavbar from "../components/PublicNavbar";
 
 const HomePage = () => {
-  const history = useHistory();
-  const changeToVendorsPage = () => {
-    history.push("/vendors");
-  };
-
-  const handleGoToTestPage = () => {
-    history.push("/test");
-  };
-
-  const handleCreateAVendor = () => {
-    history.push("/vendor/add");
-  };
   return (
-    <Container>
-      <h1>HomePage</h1>
-      <button onClick={changeToVendorsPage}>All Vendor</button>
-      <button onClick={handleCreateAVendor}>Create A Vendor</button>
-      <button onClick={handleGoToTestPage}>Go to test page</button>
-    </Container>
+    <>
+      <PublicNavbar />
+
+      <Container>
+        <h1>HomePage</h1>
+      </Container>
+    </>
   );
 };
 

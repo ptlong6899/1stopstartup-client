@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = [1, 2, 3];
 
 export default function Album() {
   const classes = useStyles();
@@ -162,20 +162,17 @@ export default function Album() {
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      {vendor?.specialization?.header}
                     </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe
-                      the content.
-                    </Typography>
+                    <Typography>{vendor?.specialization?.content}</Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
+                    {/* <Button size="small" color="primary">
                       View
                     </Button>
                     <Button size="small" color="primary">
                       Edit
-                    </Button>
+                    </Button> */}
                   </CardActions>
                 </Card>
               </Grid>

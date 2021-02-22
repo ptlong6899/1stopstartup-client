@@ -186,7 +186,7 @@ const CreateVendor = () => {
 
   const history = useHistory();
   const handleClickHome = () => {
-    history.push("/home");
+    history.push("/vendors");
   };
 
   return (
